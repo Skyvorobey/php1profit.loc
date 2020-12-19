@@ -1,5 +1,12 @@
 <?php
 function return_file($thisFile) {
-    return file_get_contents(__DIR__ . '/../../' . $thisFile);
+    $fh = fopen($thisFile, 'r');
+
+    while (!feof($fh))  {
+        $str = fgets($fh);
+        echo $str;
+    }
+
+    fclose($fh);
 }
 ?>
