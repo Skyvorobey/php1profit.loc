@@ -1,5 +1,5 @@
 <?php include_once (__DIR__ . '/scripts/guest_book/return_file.php');
-echo return_file('data/guest_book.txt');
+    return_file(__DIR__ . '/data/guest_book.txt');
 ?>
 
 <form action="guest_book.php" method="post">
